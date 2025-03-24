@@ -1,0 +1,259 @@
+// Márgenes y padding
+.mt-5 { margin-top: $spacing-lg; }
+.mb-5 { margin-bottom: $spacing-lg; }
+.py-5 { padding-top: $spacing-lg; padding-bottom: $spacing-lg; }
+
+// Texto
+.text-primary { color: $primary-color !important; }
+.text-white { color: $white !important; }
+.text-center { text-align: center; }
+
+// Fondo
+.bg-light { background-color: $light-gray !important; }
+.bg-dark { background-color: $dark !important; }
+
+// Bordes
+.rounded { border-radius: $border-radius-md; }
+
+// Sombras
+.shadow-sm { box-shadow: $shadow-sm; }
+.shadow-md { box-shadow: $shadow-md; }
+.shadow-lg { box-shadow: $shadow-lg; }
+
+// Transiciones
+.transition-base { transition: $transition-base; }
+
+// Backgrounds
+.bg-primary {
+    background-color: $primary-color !important;
+}
+
+.bg-secondary {
+    background-color: $secondary-color !important;
+}
+
+.bg-accent {
+    background-color: $accent-color !important;
+}
+
+.bg-dark {
+    background-color: $dark !important;
+}
+
+.bg-light {
+    background-color: $light !important;
+}
+
+// Text colors
+.text-primary {
+    color: $primary-color !important;
+}
+
+.text-secondary {
+    color: $secondary-color !important;
+}
+
+.text-accent {
+    color: $accent-color !important;
+}
+
+.text-dark {
+    color: $dark !important;
+}
+
+.text-light {
+    color: $light !important;
+}
+
+// Gradients
+.gradient-primary {
+    background: $gradient-primary !important;
+}
+
+.gradient-secondary {
+    background: $gradient-secondary !important;
+}
+
+// Shadows
+.shadow-sm {
+    box-shadow: $shadow-sm !important;
+}
+
+.shadow-md {
+    box-shadow: $shadow-md !important;
+}
+
+.shadow-lg {
+    box-shadow: $shadow-lg !important;
+}
+
+// Border radius
+.rounded-sm {
+    border-radius: $border-radius-sm !important;
+}
+
+.rounded-md {
+    border-radius: $border-radius-md !important;
+}
+
+.rounded-lg {
+    border-radius: $border-radius-lg !important;
+}
+
+.rounded-full {
+    border-radius: $border-radius-full !important;
+}
+
+// Transitions
+.transition-base {
+    transition: $transition-base !important;
+}
+
+.transition-smooth {
+    transition: $transition-smooth !important;
+}
+
+// Display
+.d-flex {
+    display: flex !important;
+}
+
+.d-none {
+    display: none !important;
+}
+
+// Flexbox
+.flex-column {
+    flex-direction: column !important;
+}
+
+.justify-content-center {
+    justify-content: center !important;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+// Position
+.position-relative {
+    position: relative !important;
+}
+
+.position-absolute {
+    position: absolute !important;
+}
+
+.position-fixed {
+    position: fixed !important;
+}
+
+// Z-index
+.z-index-fixed {
+    z-index: $z-index-fixed !important;
+}
+
+.z-index-sticky {
+    z-index: $z-index-sticky !important;
+}
+
+.z-index-modal {
+    z-index: $z-index-modal !important;
+}
+
+// Overflow
+.overflow-hidden {
+    overflow: hidden !important;
+}
+
+.overflow-auto {
+    overflow: auto !important;
+}
+
+// Cursor
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+// Opacity
+.opacity-0 {
+    opacity: 0 !important;
+}
+
+.opacity-50 {
+    opacity: 0.5 !important;
+}
+
+.opacity-100 {
+    opacity: 1 !important;
+}
+
+// Visibility
+.visible {
+    visibility: visible !important;
+}
+
+.invisible {
+    visibility: hidden !important;
+}
+
+// Text alignment
+.text-left {
+    text-align: left !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+// Font weight
+.font-weight-normal {
+    font-weight: 400 !important;
+}
+
+.font-weight-medium {
+    font-weight: 500 !important;
+}
+
+.font-weight-semibold {
+    font-weight: 600 !important;
+}
+
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
+// Responsive utilities
+@media (min-width: $breakpoint-sm) {
+    .d-sm-flex {
+        display: flex !important;
+    }
+    
+    .d-sm-none {
+        display: none !important;
+    }
+}
+
+@media (min-width: $breakpoint-md) {
+    .d-md-flex {
+        display: flex !important;
+    }
+    
+    .d-md-none {
+        display: none !important;
+    }
+}
+
+@media (min-width: $breakpoint-lg) {
+    .d-lg-flex {
+        display: flex !important;
+    }
+    
+    .d-lg-none {
+        display: none !important;
+    }
+} 

@@ -1,0 +1,178 @@
+@use 'sass:color';
+@use '../variables' as *;
+
+.footer {
+    background: $dark;
+    color: $light;
+    padding: 4rem 0 2rem;
+
+    .container {
+        display: grid;
+        gap: 2rem;
+
+        @media (min-width: $breakpoint-lg) {
+            grid-template-columns: 2fr 1fr 1fr;
+        }
+    }
+
+    .footer-brand {
+        margin-bottom: 2rem;
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: $light;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: rgba($light, 0.7);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+
+            a {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgba($light, 0.1);
+                border-radius: $border-radius-full;
+                color: $light;
+                transition: $transition-base;
+
+                &:hover {
+                    background: $primary-color;
+                    transform: translateY(-3px);
+                }
+            }
+        }
+    }
+
+    .footer-links {
+        h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: $light;
+            margin-bottom: 1.5rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                margin-bottom: 0.8rem;
+
+                a {
+                    color: rgba($light, 0.7);
+                    text-decoration: none;
+                    transition: $transition-base;
+
+                    &:hover {
+                        color: $primary-color;
+                        padding-left: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-contact {
+        h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: $light;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: flex;
+                align-items: flex-start;
+                gap: 1rem;
+                margin-bottom: 1.5rem;
+                color: rgba($light, 0.7);
+
+                i {
+                    color: $primary-color;
+                    font-size: 1.2rem;
+                }
+
+                p {
+                    margin: 0;
+                    line-height: 1.6;
+                }
+            }
+        }
+
+        .newsletter {
+            margin-top: 2rem;
+
+            h5 {
+                font-size: 1.1rem;
+                font-weight: 500;
+                color: $light;
+                margin-bottom: 1rem;
+            }
+
+            .form-group {
+                display: flex;
+                gap: 0.5rem;
+
+                input {
+                    flex: 1;
+                    padding: 0.8rem 1rem;
+                    border: none;
+                    border-radius: $border-radius-md;
+                    background: rgba($light, 0.1);
+                    color: $light;
+
+                    &::placeholder {
+                        color: rgba($light, 0.5);
+                    }
+
+                    &:focus {
+                        outline: none;
+                        background: rgba($light, 0.2);
+                    }
+                }
+
+                .btn {
+                    padding: 0.8rem 1.5rem;
+                    background: $primary-color;
+                    color: $light;
+                    border: none;
+                    border-radius: $border-radius-md;
+                    transition: $transition-base;
+
+                    &:hover {
+                        background: darken($primary-color, 10%);
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba($light, 0.1);
+        text-align: center;
+        color: rgba($light, 0.5);
+
+        p {
+            margin: 0;
+        }
+    }
+} 

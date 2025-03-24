@@ -1,0 +1,177 @@
+@use 'sass:color';
+@use '../variables' as *;
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, rgba($primary-color, 0.1), rgba($secondary-color, 0.1));
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('../images/hero-bg.jpg') center/cover no-repeat;
+        opacity: 0.1;
+        animation: zoomInOut 20s infinite alternate;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba($light, 0.9), rgba($light, 0.7));
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        gap: 2rem;
+        padding: 6rem 1rem 4rem;
+
+        @media (min-width: $breakpoint-lg) {
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            padding: 8rem 1rem 6rem;
+        }
+    }
+
+    .hero-content {
+        text-align: center;
+
+        @media (min-width: $breakpoint-lg) {
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: $dark;
+            margin-bottom: 1rem;
+            animation: slideUp 0.8s ease forwards;
+            opacity: 0;
+
+            @media (min-width: $breakpoint-md) {
+                font-size: 3.5rem;
+            }
+
+            @media (min-width: $breakpoint-lg) {
+                font-size: 4rem;
+            }
+        }
+
+        .lead {
+            font-size: 1.25rem;
+            color: rgba($dark, 0.8);
+            margin-bottom: 2rem;
+            animation: slideUp 0.8s ease forwards 0.2s;
+            opacity: 0;
+
+            @media (min-width: $breakpoint-md) {
+                font-size: 1.5rem;
+            }
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: $border-radius-full;
+            transition: $transition-smooth;
+            animation: slideUp 0.8s ease forwards 0.4s;
+            opacity: 0;
+
+            &-primary {
+                background: $gradient-primary;
+                color: $light;
+                border: none;
+
+                &:hover {
+                    transform: translateY(-3px);
+                    box-shadow: $shadow-lg;
+                }
+            }
+
+            &-outline {
+                background: transparent;
+                border: 2px solid $primary-color;
+                color: $primary-color;
+                margin-left: 1rem;
+
+                &:hover {
+                    background: $primary-color;
+                    color: $light;
+                }
+            }
+        }
+    }
+
+    .hero-image {
+        position: relative;
+        animation: float 6s ease-in-out infinite;
+
+        img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: $border-radius-lg;
+            box-shadow: $shadow-lg;
+            margin: 0 auto;
+            display: block;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid $primary-color;
+            border-radius: $border-radius-lg;
+            z-index: -1;
+            animation: float 6s ease-in-out infinite reverse;
+        }
+    }
+}
+
+@keyframes zoomInOut {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

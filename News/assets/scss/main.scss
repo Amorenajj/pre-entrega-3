@@ -1,0 +1,24 @@
+@use 'sass:color';
+@use 'variables' as *;
+@use 'base';
+@use 'components/navbar';
+@use 'components/hero';
+@use 'components/cards';
+@use 'components/footer';
+@use 'utilities';
+
+// Variables
+@import 'variables';
+
+// Base styles
+@import 'base';
+
+// Components
+@import 'components/navbar';
+@import 'components/hero';
+@import 'components/features';
+@import 'components/cards';
+@import 'components/footer';
+
+// Utilities
+@import 'utilities'; 
